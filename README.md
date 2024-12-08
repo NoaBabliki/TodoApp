@@ -17,7 +17,7 @@ The routing to TodoDetails component is managed in the App component.
 # Run Instructions
 
 * Clone this repo
-* Inside the root directory: `npm install'
+* Inside the root directory: `npm install`
 * `npm run dev`
 
 # React + TypeScript + Vite
