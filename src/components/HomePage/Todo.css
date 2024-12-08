@@ -1,0 +1,40 @@
+    /* Each todo item */
+  .todo-item {
+    display: flex; /* Flexbox to align title and button horizontally */
+    justify-content: space-between; /* Pushes title to the left and button to the right */
+    align-items: center; /* Vertically centers title and button */
+    background-color: #ffefdb; /* Light background color for items */
+    padding: 10px 15px;
+    margin: 10px 0; /* Space between items */
+    border-radius: 8px;
+    font-size: 18px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds slight shadow */
+  }
+  
+  /* Title inside each todo item */
+  .todo-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left; /* Ensures title is aligned to the left */
+    flex-grow: 1; /* Allows title to take available space */
+    margin-right: 20px; /* Adds a gap between title and button */
+  }
+  
+  /* Button inside each todo item */
+  .todo-button {
+    background-color: #f44336; /* Red background color */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center; /* Center-align text inside button */
+    transition: background-color 0.3s ease; /* Optional: adds smooth transition effect */
+  }
+  
+  /* Optional: Button hover effect */
+  .todo-button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+  }
+  

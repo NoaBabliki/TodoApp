@@ -1,0 +1,8 @@
+.todo-list-container {
+    padding: 20px;
+    margin: 0;
+    background-color: #f8f8f8; /* Light background color */
+    border-radius: 15px;
+    max-width: 600px; /* Adjust to your needs */
+    margin: auto; /* Centers the container horizontally */
+    }
