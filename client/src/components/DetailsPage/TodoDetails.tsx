@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { TodoType } from "../Types";
-import { mockFetchTodos } from "../getTodoList";
+import { fetchTasks } from "../getTodoList";
 import './TodoDetailes.css'
 
 
@@ -14,8 +14,8 @@ const TodoDetails: React.FC = () => {
 
     useEffect(() => {
         setIsLoading(true);
-        mockFetchTodos().then((res) => {
-            const todo = res.find((todoItem: TodoType) => todoItem.id.toString() === id);
+        fetchTasks().then((res) => {
+            const todo = res?.find((todoItem: TodoType) => todoItem.id.toString() === id);
             setCuttentTodo(todo);
             setIsLoading(false)
         }).catch(e => {

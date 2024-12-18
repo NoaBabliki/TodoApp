@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Todo from "./Todo";
-import { mockFetchTodos } from "../getTodoList";
+import { fetchTasks} from "../getTodoList";
 import { TodoType } from "../Types";
 import './TodoList.css';
 
@@ -9,15 +9,18 @@ const TodoList: React.FC = () => {
 
     const [TodoList, setTodoList] = useState<TodoType[]>([]);
     const [isLoading, setIsLoading] = useState<boolean>(false);
+
+    
     useEffect(() => {
         setIsLoading(true);
-        mockFetchTodos().then((res) => {
-            setTodoList(res);
-            console.log(TodoList);
+       fetchTasks().then(tasks => {
+        if (tasks !== undefined) {
+            setTodoList(tasks);
             setIsLoading(false);
-        }).catch(e => {
-            throw e;
-        })
+        }
+       }).catch(e => {
+        throw e;
+       });
     }, [])
 
     return (
